@@ -4,7 +4,8 @@ Repository destinated to show a Java Generic Fetcher made by me
 
 ## How to use?
 1. Create a Java Data Class, and put above the Fields a Column annotation that represents his column in Database;
-Ex: User.java
+
+*Ex: User.java*
 ```java
 public class User
 {
@@ -22,7 +23,8 @@ public class User
 ```
 
 2. Use the GenericFetcher.java
-Ex: UserController.java
+
+*Ex: UserController.java*
 ```java
 public class UserController
 {
