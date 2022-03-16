@@ -33,7 +33,7 @@ public class UserController
     	String sql = Users.select; // select * from user;
     	
     	PreparedStatement ps = connection.prepareStatement( sql, ResultSet.TYPE_SCROLL_SENSITIVE, 
-                                                               ResultSet.CONCUR_READ_ONLY );
+                                                                 ResultSet.CONCUR_READ_ONLY );
     	
     	List<User> users = GenericFetcher.fetchList( User.class, ps );
     	
