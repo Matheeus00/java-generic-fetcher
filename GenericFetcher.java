@@ -1,12 +1,10 @@
-package br.com.polygon.wm.common.db;
-
 import java.lang.reflect.Field;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.polygon.wm.common.data.annotation.Column;
+import Column;
 
 /**
  * 
