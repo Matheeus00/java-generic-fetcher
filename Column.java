@@ -1,5 +1,3 @@
-package br.com.polygon.wm.common.data.annotation;
-
 import static java.lang.annotation.ElementType.FIELD;
 
 import java.lang.annotation.Retention;
