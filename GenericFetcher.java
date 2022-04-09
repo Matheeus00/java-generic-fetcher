@@ -72,27 +72,27 @@ public class GenericFetcher
 		
 		Field[] fields = clazz.getDeclaredFields();
 		
-		do
+		if ( rs.first() )
 		{
-			for ( Field field : fields )
+			do
 			{
-				field.setAccessible( true );
-				
-				Column column = field.getAnnotation( Column.class );
-				
-				String annotationValue = column.value();
-				
-				if ( rs.first() )
+				for ( Field field : fields )
 				{
+					field.setAccessible( true );
+
+					Column column = field.getAnnotation( Column.class );
+
+					String annotationValue = column.value();
+
 					Object value = rs.getObject( annotationValue );
-					
+
 					field.set( object, value.getClass().cast( value ) );											
 				}
+
+				objectList.add( object );
 			}
-			
-			objectList.add( object );
+			while ( rs.next() );
 		}
-		while ( rs.next() );
 
 		rs.close();
 
